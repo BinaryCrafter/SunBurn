@@ -1,0 +1,16 @@
+[
+{
+  "modid": "sunburn",
+  "name": "Sunburn",
+  "description": "Steve has developed photophobia",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["WalterWeight"],
+  "credits": "WalterWeight",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
