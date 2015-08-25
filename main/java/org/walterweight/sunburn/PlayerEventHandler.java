@@ -27,6 +27,11 @@ public class PlayerEventHandler
 		if (!(entity instanceof EntityPlayer))
 			return;
 
+		EntityPlayer entityPlayer = (EntityPlayer) entity;
+
+		if (entityPlayer.ticksExisted < SunBurn.ticksBeforeAffectedBySunburn)
+			return;
+
 		World world = entity.worldObj;
 
 		if (world.isDaytime() && !world.isRemote)

@@ -24,6 +24,7 @@ public class SunBurn
     public static boolean helmetProtectsAgainstSun;
     public static boolean helmetRequiresFireProtection;
     public static int chanceOfHelmetTakingDamagePerTick;
+    public static int ticksBeforeAffectedBySunburn;
 
     @Instance("sunburn")
     public static SunBurn instance;
@@ -50,9 +51,13 @@ public class SunBurn
                 true, "If true, a helmet will protect the player from the sun");
         helmetRequiresFireProtection = config.getBoolean("helmetRequiresFireProtection", Configuration.CATEGORY_GENERAL,
                 true, "If true, a helmet must have the fire protection enchantment to be effective");
-        chanceOfHelmetTakingDamagePerTick = config.getInt("chanceOfHelmetTakingDamagePerTick", Configuration.CATEGORY_GENERAL,
+        chanceOfHelmetTakingDamagePerTick = config.getInt("chanceOfHelmetTakingDamagePerTick",
+                Configuration.CATEGORY_GENERAL,
                 25, 0, 100,
                 "The likelihood of a helmet taking damage per tick as a percentage");
+        ticksBeforeAffectedBySunburn = config.getInt("ticksBeforeAffectedBySunburn", Configuration.CATEGORY_GENERAL,
+                24000,0,512000,
+                "The number of ticks a player can be in the world before being affected by sunburn. One minecraft day is 24,000 ticks");
         config.save();
     }
 
